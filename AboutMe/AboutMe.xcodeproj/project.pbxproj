@@ -11,6 +11,8 @@
 		B918641A28FB36E000E1BB01 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B918641628FB36C900E1BB01 /* Poppins-Medium.ttf */; };
 		B918641B28FB36E200E1BB01 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B918641728FB36D200E1BB01 /* Poppins-Regular.ttf */; };
 		B918641D28FB37C000E1BB01 /* LocationAndSocialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918641C28FB37C000E1BB01 /* LocationAndSocialsView.swift */; };
+		B9350B0A28FCE16100CD4490 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9350B0928FCE16100CD4490 /* InterestsView.swift */; };
+		B994DE3B28FCE652002936AE /* WhyiOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994DE3A28FCE652002936AE /* WhyiOSView.swift */; };
 		B99B12FB28FB045C0000CA28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B12FA28FB045C0000CA28 /* AppDelegate.swift */; };
 		B99B12FD28FB045C0000CA28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B12FC28FB045C0000CA28 /* SceneDelegate.swift */; };
 		B99B12FF28FB045C0000CA28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B12FE28FB045C0000CA28 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		B918641628FB36C900E1BB01 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		B918641728FB36D200E1BB01 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		B918641C28FB37C000E1BB01 /* LocationAndSocialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAndSocialsView.swift; sourceTree = "<group>"; };
+		B9350B0928FCE16100CD4490 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
+		B994DE3A28FCE652002936AE /* WhyiOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyiOSView.swift; sourceTree = "<group>"; };
 		B99B12F728FB045C0000CA28 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99B12FA28FB045C0000CA28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B99B12FC28FB045C0000CA28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				B99B12FE28FB045C0000CA28 /* ViewController.swift */,
 				B99B130E28FB04C50000CA28 /* ImageAndNameView.swift */,
 				B918641C28FB37C000E1BB01 /* LocationAndSocialsView.swift */,
+				B9350B0928FCE16100CD4490 /* InterestsView.swift */,
+				B994DE3A28FCE652002936AE /* WhyiOSView.swift */,
 				B99B130328FB045E0000CA28 /* Assets.xcassets */,
 				B99B130528FB045E0000CA28 /* LaunchScreen.storyboard */,
 				B99B130828FB045E0000CA28 /* Info.plist */,
@@ -163,7 +169,9 @@
 				B99B12FF28FB045C0000CA28 /* ViewController.swift in Sources */,
 				B99B12FB28FB045C0000CA28 /* AppDelegate.swift in Sources */,
 				B99B12FD28FB045C0000CA28 /* SceneDelegate.swift in Sources */,
+				B994DE3B28FCE652002936AE /* WhyiOSView.swift in Sources */,
 				B918641D28FB37C000E1BB01 /* LocationAndSocialsView.swift in Sources */,
+				B9350B0A28FCE16100CD4490 /* InterestsView.swift in Sources */,
 				B99B130F28FB04C50000CA28 /* ImageAndNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

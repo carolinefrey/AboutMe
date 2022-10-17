@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LocationAndSocialsView: UIView {
     
     let box = UIView()
@@ -42,54 +43,55 @@ class LocationAndSocialsView: UIView {
         setConstraints()
     }
     
-    func configureBox() {
+    private func configureBox() {
         box.backgroundColor = UIColor(named: "Color2")
         box.layer.cornerRadius = 30
     }
     
-    func configurePin() {
+    private func configurePin() {
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .regular, scale: .large)
         pin.image = UIImage(systemName: "mappin", withConfiguration: largeConfig)
         pin.tintColor = .black
         pin.contentMode = .left
     }
     
-    func configureLocation() {
+    private func configureLocation() {
         location.text = "Denver, CO"
-        location.textColor = .black
+        location.textColor = UIColor(named: "Color1")
         location.font = UIFont(name: "Poppins-Regular", size: 18)
         location.textAlignment = .left
     }
     
-    func configureDivider() {
+    private func configureDivider() {
         divider.backgroundColor = UIColor(named: "Color1")
+        divider.layer.opacity = 0.3
     }
     
-    func configureInstaLogo() {
+    private func configureInstaLogo() {
         instaLogo.image = UIImage(named: "instagram")
         instaLogo.contentMode = .scaleAspectFit
     }
     
-    func configureInstaHandle() {
+    private func configureInstaHandle() {
         instaHandle.text = "@cfrey9"
-        instaHandle.textColor = .gray
+        instaHandle.textColor = UIColor(named: "Color1")
         instaHandle.font = UIFont(name: "Poppins-Regular", size: 16)
         instaHandle.textAlignment = .left
     }
     
-    func configureLinkedinLogo() {
+    private func configureLinkedinLogo() {
         linkedinLogo.image = UIImage(named: "linkedin")
         linkedinLogo.contentMode = .scaleAspectFit
     }
     
-    func configureLinkedinHandle() {
+    private func configureLinkedinHandle() {
         linkedinHandle.text = "linkedin.com/in/carolinerfrey/"
-        linkedinHandle.textColor = .gray
+        linkedinHandle.textColor = UIColor(named: "Color1")
         linkedinHandle.font = UIFont(name: "Poppins-Regular", size: 16)
         linkedinHandle.textAlignment = .left
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         box.translatesAutoresizingMaskIntoConstraints = false
         pin.translatesAutoresizingMaskIntoConstraints = false
         location.translatesAutoresizingMaskIntoConstraints = false
@@ -111,9 +113,10 @@ class LocationAndSocialsView: UIView {
             location.topAnchor.constraint(equalTo: box.topAnchor, constant: 10),
             location.leadingAnchor.constraint(equalTo: pin.trailingAnchor, constant: 5),
             
-            divider.widthAnchor.constraint(equalTo: box.widthAnchor),
+            divider.widthAnchor.constraint(equalTo: box.widthAnchor, constant: -30),
             divider.heightAnchor.constraint(equalToConstant: 2),
             divider.topAnchor.constraint(equalTo: location.bottomAnchor, constant: 10),
+            divider.centerXAnchor.constraint(equalTo: box.centerXAnchor),
             
             instaLogo.topAnchor.constraint(equalTo: divider.topAnchor, constant: 10),
             instaLogo.leadingAnchor.constraint(equalTo: box.leadingAnchor, constant: 34),
@@ -139,3 +142,4 @@ class LocationAndSocialsView: UIView {
     }
     
 }
+

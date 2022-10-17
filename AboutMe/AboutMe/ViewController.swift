@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController {
 
     let imageAndNameView = ImageAndNameView()
-    let locationAndSocials = LocationAndSocialsView()
+    let locationAndSocialsView = LocationAndSocialsView()
+    let interestsView = InterestsView()
+    let whyiOSView = WhyiOSView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +20,18 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(named: "Background")
 
         view.addSubview(imageAndNameView)
-        view.addSubview(locationAndSocials)
+        view.addSubview(locationAndSocialsView)
+        view.addSubview(interestsView)
+        view.addSubview(whyiOSView)
         
         setConstraints()
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         imageAndNameView.translatesAutoresizingMaskIntoConstraints = false
-        locationAndSocials.translatesAutoresizingMaskIntoConstraints = false
+        locationAndSocialsView.translatesAutoresizingMaskIntoConstraints = false
+        interestsView.translatesAutoresizingMaskIntoConstraints = false
+        whyiOSView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             imageAndNameView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
@@ -33,12 +39,27 @@ class ViewController: UIViewController {
             imageAndNameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
             imageAndNameView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
         
-            locationAndSocials.topAnchor.constraint(equalTo: imageAndNameView.bottomAnchor, constant: 30),
-            locationAndSocials.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
-            locationAndSocials.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
-            locationAndSocials.heightAnchor.constraint(equalToConstant: 120),
+            locationAndSocialsView.topAnchor.constraint(equalTo: imageAndNameView.bottomAnchor, constant: 10),
+            locationAndSocialsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
+            locationAndSocialsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
+            locationAndSocialsView.heightAnchor.constraint(equalToConstant: 120),
+            
+            interestsView.topAnchor.constraint(equalTo: locationAndSocialsView.bottomAnchor, constant: 10),
+            interestsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
+            interestsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
+            interestsView.heightAnchor.constraint(equalToConstant: 100),
+            
+            whyiOSView.topAnchor.constraint(equalTo: interestsView.bottomAnchor, constant: 10),
+            whyiOSView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
+            whyiOSView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
+            whyiOSView.heightAnchor.constraint(equalToConstant: 100),
         ])
     }
 }
 
-
+extension ViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        UIApplication.shared.open(URL)
+        return false
+    }
+}

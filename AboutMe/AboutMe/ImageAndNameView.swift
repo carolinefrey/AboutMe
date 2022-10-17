@@ -31,24 +31,24 @@ class ImageAndNameView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureImageBackground() {
+    private func configureImageBackground() {
         imageBackground.backgroundColor = UIColor(named: "Color1")
         imageBackground.layer.cornerRadius = 30
     }
     
-    func configureImage() {
+    private func configureImage() {
         image.image = UIImage(named: "me")
         image.contentMode = .scaleAspectFit
     }
     
-    func configureName() {
+    private func configureName() {
         name.text = "Caroline Frey"
         name.textColor = .white
         name.font = UIFont(name: "Poppins-Medium", size: 30)
         name.textAlignment = .center
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         imageBackground.translatesAutoresizingMaskIntoConstraints = false
         image.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
