@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9013AF828FE20B400E4C555 /* MainUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9013AF728FE20B400E4C555 /* MainUIView.swift */; };
 		B918641928FB36DE00E1BB01 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B918641528FB36C600E1BB01 /* Poppins-Light.ttf */; };
 		B918641A28FB36E000E1BB01 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B918641628FB36C900E1BB01 /* Poppins-Medium.ttf */; };
 		B918641B28FB36E200E1BB01 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B918641728FB36D200E1BB01 /* Poppins-Regular.ttf */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9013AF728FE20B400E4C555 /* MainUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIView.swift; sourceTree = "<group>"; };
 		B918641528FB36C600E1BB01 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		B918641628FB36C900E1BB01 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		B918641728FB36D200E1BB01 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				B918641C28FB37C000E1BB01 /* LocationAndSocialsView.swift */,
 				B9350B0928FCE16100CD4490 /* InterestsView.swift */,
 				B994DE3A28FCE652002936AE /* WhyiOSView.swift */,
+				B9013AF728FE20B400E4C555 /* MainUIView.swift */,
 				B99B130328FB045E0000CA28 /* Assets.xcassets */,
 				B99B130528FB045E0000CA28 /* LaunchScreen.storyboard */,
 				B99B130828FB045E0000CA28 /* Info.plist */,
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99B12FF28FB045C0000CA28 /* ViewController.swift in Sources */,
+				B9013AF828FE20B400E4C555 /* MainUIView.swift in Sources */,
 				B99B12FB28FB045C0000CA28 /* AppDelegate.swift in Sources */,
 				B99B12FD28FB045C0000CA28 /* SceneDelegate.swift in Sources */,
 				B994DE3B28FCE652002936AE /* WhyiOSView.swift in Sources */,

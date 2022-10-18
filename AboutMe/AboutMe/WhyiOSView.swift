@@ -39,7 +39,7 @@ class WhyiOSView: UIView {
     }
 
     private func configureWhyiOS() {
-        whyiOS.text = "placeholder"
+        whyiOS.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         whyiOS.textColor = UIColor(named: "Color1")
         whyiOS.font = UIFont(name: "Poppins-Regular", size: 14)
         whyiOS.lineBreakMode = .byWordWrapping
@@ -65,7 +65,6 @@ class WhyiOSView: UIView {
             whyiOS.topAnchor.constraint(equalTo: sectionTitle.bottomAnchor, constant: 10),
             whyiOS.leadingAnchor.constraint(equalTo: box.leadingAnchor, constant: 24),
             whyiOS.trailingAnchor.constraint(equalTo: box.trailingAnchor, constant: -24),
-            whyiOS.bottomAnchor.constraint(equalTo: box.bottomAnchor, constant: -15),
         ])
     }
     

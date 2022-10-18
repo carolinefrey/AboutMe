@@ -9,57 +9,50 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let imageAndNameView = ImageAndNameView()
-    let locationAndSocialsView = LocationAndSocialsView()
-    let interestsView = InterestsView()
-    let whyiOSView = WhyiOSView()
+    var scrollView = UIScrollView()
+    var mainUIView = MainUIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(named: "Background")
-
-        view.addSubview(imageAndNameView)
-        view.addSubview(locationAndSocialsView)
-        view.addSubview(interestsView)
-        view.addSubview(whyiOSView)
         
+        view.addSubview(scrollView)
+        scrollView.addSubview(mainUIView)
+        
+        configureScrollView()
         setConstraints()
     }
     
+    private func configureScrollView() {
+        scrollView.contentSize = view.bounds.size
+        scrollView.isScrollEnabled = true
+        scrollView.alwaysBounceVertical = true
+        scrollView.frame = mainUIView.bounds
+    }
+
     private func setConstraints() {
-        imageAndNameView.translatesAutoresizingMaskIntoConstraints = false
-        locationAndSocialsView.translatesAutoresizingMaskIntoConstraints = false
-        interestsView.translatesAutoresizingMaskIntoConstraints = false
-        whyiOSView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        mainUIView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            imageAndNameView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            imageAndNameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
-            imageAndNameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
-            imageAndNameView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
-        
-            locationAndSocialsView.topAnchor.constraint(equalTo: imageAndNameView.bottomAnchor, constant: 10),
-            locationAndSocialsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
-            locationAndSocialsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
-            locationAndSocialsView.heightAnchor.constraint(equalToConstant: 120),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            interestsView.topAnchor.constraint(equalTo: locationAndSocialsView.bottomAnchor, constant: 10),
-            interestsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
-            interestsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
-            interestsView.heightAnchor.constraint(equalToConstant: 100),
-            
-            whyiOSView.topAnchor.constraint(equalTo: interestsView.bottomAnchor, constant: 10),
-            whyiOSView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 34),
-            whyiOSView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -34),
-            whyiOSView.heightAnchor.constraint(equalToConstant: 100),
+            mainUIView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            mainUIView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            mainUIView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            mainUIView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            mainUIView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
         ])
     }
 }
-
-extension ViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        UIApplication.shared.open(URL)
-        return false
-    }
-}
+//
+//extension ViewController: UITextViewDelegate {
+//    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+//        UIApplication.shared.open(URL)
+//        return false
+//    }
+//}
