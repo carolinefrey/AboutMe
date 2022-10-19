@@ -50,7 +50,7 @@ class MainUIView: UIView {
             whyiOSView.topAnchor.constraint(equalTo: interestsView.bottomAnchor, constant: 10),
             whyiOSView.leadingAnchor.constraint(equalTo: interestsView.leadingAnchor),
             whyiOSView.trailingAnchor.constraint(equalTo: interestsView.trailingAnchor),
-            whyiOSView.heightAnchor.constraint(equalToConstant: 300),
+            whyiOSView.heightAnchor.constraint(equalToConstant: 340),
         ])
     }
     
