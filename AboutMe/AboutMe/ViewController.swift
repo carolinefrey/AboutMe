@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor(named: "Background")
         
         view.addSubview(scrollView)
@@ -25,10 +24,10 @@ class ViewController: UIViewController {
     }
     
     private func configureScrollView() {
-        scrollView.contentSize = view.bounds.size
+        scrollView.frame = view.frame
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 900)
         scrollView.isScrollEnabled = true
         scrollView.alwaysBounceVertical = true
-        scrollView.frame = mainUIView.bounds
     }
 
     private func setConstraints() {
@@ -43,9 +42,8 @@ class ViewController: UIViewController {
             
             mainUIView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             mainUIView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            mainUIView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            mainUIView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             mainUIView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            mainUIView.heightAnchor.constraint(equalTo: view.heightAnchor)
         ])
     }
 }
