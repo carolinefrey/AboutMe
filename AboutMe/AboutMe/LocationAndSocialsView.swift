@@ -18,7 +18,7 @@ class LocationAndSocialsView: UIView {
     let instaHandle = UILabel()
     let linkedinLogo = UIImageView()
     let linkedinHandle = UILabel()
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -77,6 +77,10 @@ class LocationAndSocialsView: UIView {
         instaHandle.textColor = UIColor(named: "Color1")
         instaHandle.font = UIFont(name: "Poppins-Regular", size: 16)
         instaHandle.textAlignment = .left
+        
+        let tapAction = UITapGestureRecognizer(target: self, action: #selector(openIG(_:)))
+        instaHandle.isUserInteractionEnabled = true
+        instaHandle.addGestureRecognizer(tapAction)
     }
     
     private func configureLinkedinLogo() {
@@ -89,6 +93,10 @@ class LocationAndSocialsView: UIView {
         linkedinHandle.textColor = UIColor(named: "Color1")
         linkedinHandle.font = UIFont(name: "Poppins-Regular", size: 16)
         linkedinHandle.textAlignment = .left
+        
+        let tapAction = UITapGestureRecognizer(target: self, action: #selector(openLinkedIn(_:)))
+        linkedinHandle.isUserInteractionEnabled = true
+        linkedinHandle.addGestureRecognizer(tapAction)
     }
     
     private func setConstraints() {
@@ -141,5 +149,31 @@ class LocationAndSocialsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Opens IG app when tapping on tweet card
+    @objc func openIG(_ sender: UITapGestureRecognizer) {
+        let appURL = URL(string: "instagram://cfrey9")!
+        let webURL = URL(string: "https://instagram.com/cfrey9")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            application.open(webURL)
+        }
+    }
+    
+    // Opens LinkedIn app when tapping on tweet card
+    @objc func openLinkedIn(_ sender: UITapGestureRecognizer) {
+        let appURL = URL(string: "linkedin://carolinerfrey")!
+        let webURL = URL(string: "https://linkedin.com/in/carolinerfrey/")!
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            application.open(webURL)
+        }
+    }
 }
-
