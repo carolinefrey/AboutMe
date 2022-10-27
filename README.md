@@ -4,7 +4,9 @@ A simple app that features a scrollable profile of my name, picture, location, s
 
 ## Includes...
 -- Programmatic UI
+
 -- Autolayout
+
 -- UI Subviews
 -- UIScrollView
 -- UIImageView
