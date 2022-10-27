@@ -8,8 +8,13 @@ A simple app that features a scrollable profile of my name, picture, location, s
 -- Autolayout
 
 -- UI Subviews
+
 -- UIScrollView
+
 -- UIImageView
+
 -- UIStackView
+
 -- UIAlertController
+
 -- Links
