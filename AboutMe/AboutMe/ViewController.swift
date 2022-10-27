@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var mainUIView = MainUIView()
     lazy var sayHiButton = UIButton(type: .custom)
     
+    let alert = UIAlertController(title: "Hey! 👋🏼", message: "Nice to meet you.", preferredStyle: .alert)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "Background")
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
         
         configureScrollView()
         configureButton()
+        configureAlert()
         setConstraints()
     }
     
@@ -41,6 +44,10 @@ class ViewController: UIViewController {
         sayHiButton.layer.cornerRadius = 30
         
         sayHiButton.addTarget(self, action: #selector(sayHiButtonPressed), for: .touchUpInside)
+    }
+    
+    private func configureAlert() {
+        alert.addAction(UIAlertAction(title: "Done", style: .default))
     }
     
     private func setConstraints() {
@@ -68,7 +75,7 @@ class ViewController: UIViewController {
     }
     
     @objc func sayHiButtonPressed() {
-        print("Hi!")
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

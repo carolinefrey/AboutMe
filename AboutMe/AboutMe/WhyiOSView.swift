@@ -39,7 +39,7 @@ class WhyiOSView: UIView {
     }
 
     private func configureWhyiOS() {
-        whyiOS.text = "I studied computer science in college, but didn't pursue a career in programming after I graduated. Since then, I have changed my mind and decided that I want to get back into it! I started a web dev course on Udemy and I liked it, but didn't love it. I decided to give iOS Dev a try because I've always loved Apple and have always had a deep appreciation for well designed apps. I completed 100 Days of SwiftUI and loved it! Now I'm working towards making a career switch to becoming an iOS Developer."
+        whyiOS.text = "I studied computer science in college, but didn't pursue a career in programming after I graduated. Since then, I have decided that I want to get back into it! I started a Web Dev course on Udemy and I liked it, but didn't love it. I decided to give iOS Dev a try because I've always loved Apple and have always had an appreciation for well designed apps. I completed 100 Days of SwiftUI and loved it! Now I'm working towards making the career switch to becoming an iOS Developer."
         whyiOS.textColor = UIColor(named: "Color1")
         whyiOS.font = UIFont(name: "Poppins-Regular", size: 14)
         whyiOS.lineBreakMode = .byWordWrapping
