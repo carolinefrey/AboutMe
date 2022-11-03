@@ -13,7 +13,6 @@ class MainUIView: UIView {
     let locationAndSocialsView = LocationAndSocialsView()
     let interestsView = InterestsView()
     let whyiOSView = WhyiOSView()
-//    lazy var sayHiButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,27 +21,15 @@ class MainUIView: UIView {
         addSubview(locationAndSocialsView)
         addSubview(interestsView)
         addSubview(whyiOSView)
-        
-        //addSubview(sayHiButton)
-        
-        //configureSayHiButton()
+
         setConstraints()
     }
-    
-//    private func configureSayHiButton() {
-//        sayHiButton.setTitle("Say hi!", for: .normal)
-//        sayHiButton.setTitleColor(UIColor(named: "Color1"), for: .normal)
-//        sayHiButton.tintColor = UIColor(named: "Color2")
-//        sayHiButton.configuration = .filled()
-//        sayHiButton.layer.cornerRadius = 30
-//    }
-//    
+
     private func setConstraints() {
         imageAndNameView.translatesAutoresizingMaskIntoConstraints = false
         locationAndSocialsView.translatesAutoresizingMaskIntoConstraints = false
         interestsView.translatesAutoresizingMaskIntoConstraints = false
         whyiOSView.translatesAutoresizingMaskIntoConstraints = false
-        //sayHiButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             imageAndNameView.topAnchor.constraint(equalTo: topAnchor, constant: 34),
@@ -64,11 +51,6 @@ class MainUIView: UIView {
             whyiOSView.leadingAnchor.constraint(equalTo: interestsView.leadingAnchor),
             whyiOSView.trailingAnchor.constraint(equalTo: interestsView.trailingAnchor),
             whyiOSView.heightAnchor.constraint(equalToConstant: 340),
-            
-//            sayHiButton.topAnchor.constraint(equalTo: whyiOSView.bottomAnchor, constant: 10),
-//            sayHiButton.widthAnchor.constraint(equalToConstant: 150),
-//            sayHiButton.heightAnchor.constraint(equalToConstant: 50),
-//            sayHiButton.centerXAnchor.constraint(equalTo: whyiOSView.centerXAnchor),
         ])
     }
     
